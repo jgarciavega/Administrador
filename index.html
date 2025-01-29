@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador</title>
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+  <!-- Login: Esta sección se muestra antes de que el usuario inicie sesión -->
+  <div id="login-container" class="login-container">
+    <img src="assets/api_logo.png" alt="Logo API">
+    <input type="text" id="username" placeholder="Nombre de usuario" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="login()">Iniciar sesión</button>
+    <p><a href="#" onclick="forgotPassword()">¿Olvidaste tu contraseña?</a></p>
+  </div>
+
+  <!-- Barra superior (header) con logos y buscador, solo visible después del login -->
+  <div class="header" id="header" style="display: none;">
+    <img src="assets/bcs_logo.png" alt="Logo BCS" class="logo-left">
+    
+    
+    <div class="search-container">
+      <input type="text" placeholder="Buscar...">
+      <img src="assets/buscar.png" alt="Buscar" />
+    </div>
+    
+
+    <img src="assets/api_logo.png" alt="Logo API" class="logo-right">
+  </div>
+
+  <!-- Barra lateral (sidebar) y contenido principal -->
+  <div id="app-container" class="app-container" style="display: none;">
+    <div class="sidebar">
+      <!-- Botón para colapsar o expandir el sidebar -->
+      <button class="toggle-sidebar-btn" onclick="toggleSidebar()">☰</button>
+      <h2>Menu</h2>
+      <ul class="menu">
+        <li><a href="#">🏠 Inicio</a></li>
+        <li>
+          <a href="#">📁 Gestión de Archivos</a>
+          <ul class="submenu">
+            <li><a href="#">⬆️ Subir Documento</a></li>
+            <li><a href="#">✅ Estado del Documento</a></li>
+            <li><a href="#">⭐ Favoritos/Marcados</a></li>
+            <li><a href="#">🕒 Historial de Consultas</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">🔍 Verificación y Tareas Pendientes</a>
+          <ul class="submenu">
+            <li><a href="#">⏳ Documentos Pendientes de Validación</a></li>
+            <li><a href="#">✔️ Verificación de Cumplimiento</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">📋 Consultas y Reportes</a>
+          <ul class="submenu">
+            <li><a href="#">🔍 Consultas</a></li>
+            <li><a href="#">📊 Informes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">⚙️ Configuraciones y Ayuda</a>
+          <ul class="submenu">
+            <li><a href="#">⚙️ Ajustes</a></li>
+            <li><a href="#">❓ Ayuda</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contenido principal que solo se muestra después de iniciar sesión -->
+    <div class="content">
+      <h1>Bienvenido al Gestor de Archivos</h1>
+    </div>
+  </div>
+
+  <!-- Barra de título con botones de control (minimizar, maximizar, cerrar) -->
+  <div class="window-controls">
+    <button onclick="minimizeWindow()">_</button>
+    <button onclick="maximizeWindow()">🗖</button>
+    <button onclick="closeWindow()">✖</button>
+  </div>
+
+  <script src="index.js"></script>  
+</body>
+</html>

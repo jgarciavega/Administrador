@@ -1,0 +1,220 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #8c8c8c; /* Fondo rojizo */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  flex-direction: row;
+}
+
+/* Barra superior */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b24c3f; /* Cambié a un color más neutro */
+  padding: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Estilo para el título */
+.title {
+  font-size: 50px;  /* Aumenté el tamaño de la fuente */
+  font-weight: bold;
+  color: #a02121;
+  flex-grow: 1; /* Título se coloca en el centro */
+  text-align: center; /* Centra el título */
+  flex-shrink: 0;
+}
+
+/* Logos */
+.logo-left {
+  width: 350px;  /* Ajustado el tamaño del logo de BCS */
+  height: 100px;
+  margin-left: 5px;
+}
+
+.logo-right {
+  width: 300px;  /* Ajustado el tamaño del logo de API */
+  height: 100px;
+  margin-right: 1px;
+  position: absolute;
+  right: 10px;
+}
+
+/* Buscador */
+.search-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-10%);
+  margin-top: 10px;
+  z-index: 1;
+}
+
+.search-container input {
+  padding: 14px 40px 14px 12px;
+  width: 500px;
+  border-radius: 8px;
+  border: 1px solid #d9caca;
+  font-size: 18px;
+  background-color:#84b4f7 !important;
+  box-sizing: border-box;
+}
+
+.search-container img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+/* Barra lateral (Sidebar) */
+.sidebar {
+  width: 250px;
+  background-color: #bcab79;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(6, 79, 82, 0.1);
+  border-radius: 10px;
+  height: 100%;
+  position: fixed;
+  left: 10;
+  top: 100px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;  /* Sidebar colapsado */
+}
+
+.sidebar h2 {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  font-size: 28px;
+}
+
+.menu > li {
+  margin: 20px 0;
+}
+
+.menu > li > a {
+  text-decoration: none;
+  color: #01010cae;
+  font-weight: bold;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.menu > li > a:hover {
+  background-color: #ecd20d;
+}
+
+.submenu {
+  display: none;
+  padding-left: 20px;
+}
+
+.submenu.show {
+  display: block;
+}
+
+/* Barra de título con botones de control (colocados de forma vertical) */
+.window-controls {
+  position: fixed;
+  top: 1200px;  /* Coloca los botones en la parte superior */
+  right: 10px;  /* Coloca los botones al lado derecho */
+  display: flex;
+  flex-direction: column; /* Cambiar de horizontal a vertical */
+  justify-content: space-around;
+  align-items: center;  /* Centra los botones verticalmente */
+  padding: 10px;
+  z-index: 9999;
+}
+
+.window-controls button {
+  background-color: #04094a;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  color: rgb(230, 230, 19);
+  text-align: center;
+  margin: 5px 0; /* Añadí un margen entre los botones */
+}
+
+.window-controls button:hover {
+  background-color: #1010ee;
+}
+
+/* Estilos del Login */
+.login-container {
+  background-color: #679aeb;
+  padding: 80px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Ajustamos el tamaño del login */
+  text-align: center;
+  margin: 0 auto; /* Centrado horizontal */
+  position: relative;
+  top: 20%; /* Asegura que esté centrado verticalmente */
+}
+
+.login-container img {
+  width: 150px; /* Reducimos el tamaño del logo */
+  height: 130px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 14px;
+  margin: 16px 0;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #1628ca;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(15, 133, 231);
+  color: rgb(221, 222, 207);
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8493a3;
+}
+
+a {
+  color: #ff006a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
